@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Interescolar 2026 | Inscrição</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="hero">
+
+  <div class="hero-overlay"></div>
+
+  <img 
+    class="brand-image"
+    src="assets/identidade-visual.jpg"
+    alt="V.O.A.R. Grêmio Estudantil 2026"
+  >
+
+  <div class="hero-content">
+
+    <span class="tag">
+      GRÊMIO ESTUDANTIL • 2026
+    </span>
+
+    <h1>
+      INTERESCOLAR 2026
+    </h1>
+
+    <p>
+      Ficha de inscrição do participante
+    </p>
+
+    <a class="primary-button" href="#inscricao">
+      FAZER INSCRIÇÃO
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<section class="intro">
+
+  <p class="eyebrow">
+    CETI FRANCISVAL RODRIGUES DO NASCIMENTO
+  </p>
+
+  <h2>
+    Participe do Interescolar 2026
+  </h2>
+
+  <p>
+    Preencha corretamente todos os dados abaixo.
+  </p>
+
+  <div class="modalidades">
+
+    <span>⚽ Futsal</span>
+
+    <span>🏐 Vôlei</span>
+
+    <span>🔥 Queimada</span>
+
+  </div>
+
+</section>
+
+
+<form id="inscricao" class="form-card">
+
+  <!-- DADOS -->
+
+  <div class="section-title">
+
+    <span>01</span>
+
+    <div>
+
+      <h2>
+        Dados do participante
+      </h2>
+
+      <p>
+        Informe os dados corretamente.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <label>
+
+    Nome completo *
+
+    <input
+      type="text"
+      name="nome"
+      required
+      placeholder="Digite seu nome completo"
+    >
+
+  </label>
+
+
+  <div class="grid-2">
+
+    <label>
+
+      Data de nascimento *
+
+      <input
+        type="date"
+        name="nascimento"
+        required
+      >
+
+    </label>
+
+
+    <label>
+
+      Idade *
+
+      <input
+        type="number"
+        name="idade"
+        min="1"
+        max="100"
+        required
+        placeholder="Ex.: 15"
+      >
+
+    </label>
+
+  </div>
+
+
+  <label>
+
+    Escola *
+
+    <input
+      type="text"
+      name="escola"
+      required
+      placeholder="Nome da escola"
+    >
+
+  </label>
+
+
+  <label>
+
+    Série/Turma *
+
+    <input
+      type="text"
+      name="turma"
+      required
+      placeholder="Ex.: 1º A"
+    >
+
+  </label>
+
+
+  <!-- MODALIDADE -->
+
+  <div class="section-title">
+
+    <span>02</span>
+
+    <div>
+
+      <h2>
+        Modalidade
+      </h2>
+
+      <p>
+        Escolha uma modalidade.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <fieldset>
+
+    <legend>
+      Modalidade *
+    </legend>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="modalidade"
+        value="Futsal"
+        required
+      >
+
+      <span>
+        ⚽ Futsal
+      </span>
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="modalidade"
+        value="Vôlei"
+      >
+
+      <span>
+        🏐 Vôlei
+      </span>
+
+    </label>
+
+
+    <label class="option">
+
+      <input
+        type="radio"
+        name="modalidade"
+        value="Queimada"
+      >
+
+      <span>
+        🔥 Queimada
+      </span>
+
+    </label>
+
+  </fieldset>
+
+
+  <!-- RESPONSÁVEL -->
+
+  <div class="section-title">
+
+    <span>03</span>
+
+    <div>
+
+      <h2>
+        Responsável pela equipe
+      </h2>
+
+      <p>
+        Dados para contato.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <label>
+
+    Nome do responsável *
+
+    <input
+      type="text"
+      name="responsavel"
+      required
+      placeholder="Nome completo"
+    >
+
+  </label>
+
+
+  <label>
+
+    Telefone *
+
+    <input
+      type="tel"
+      name="telefone"
+      required
+      placeholder="(00) 00000-0000"
+    >
+
+  </label>
+
+
+  <!-- DECLARAÇÃO -->
+
+  <div class="section-title">
+
+    <span>04</span>
+
+    <div>
+
+      <h2>
+        Declaração do participante
+      </h2>
+
+      <p>
+        Leia antes de enviar.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="declaration">
+
+    Declaro que as informações fornecidas nesta ficha são verdadeiras
+    e que estou ciente das regras estabelecidas no Edital do
+    Interescolar 2026.
+
+    <br><br>
+
+    Comprometo-me a respeitar os demais participantes, professores,
+    árbitros, organizadores e as normas da competição, mantendo uma
+    conduta adequada durante todo o evento.
+
+  </div>
+
+
+  <label class="check">
+
+    <input
+      type="checkbox"
+      name="declaracao"
+      required
+    >
+
+    <span>
+      Li e estou de acordo com a declaração acima. *
+    </span>
+
+  </label>
+
+
+  <!-- AUTORIZAÇÃO -->
+
+  <div class="section-title">
+
+    <span>05</span>
+
+    <div>
+
+      <h2>
+        Autorização do responsável
+      </h2>
+
+      <p>
+        Preencha quando o participante for menor de idade.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <label>
+
+    Nome completo do responsável
+
+    <input
+      type="text"
+      name="responsavel_legal"
+      placeholder="Nome do responsável"
+    >
+
+  </label>
+
+
+  <div class="grid-2">
+
+    <label>
+
+      CPF
+
+      <input
+        type="text"
+        name="cpf"
+        placeholder="000.000.000-00"
+      >
+
+    </label>
+
+
+    <label>
+
+      Telefone
+
+      <input
+        type="tel"
+        name="telefone_responsavel"
+        placeholder="(00) 00000-0000"
+      >
+
+    </label>
+
+  </div>
+
+
+  <label class="check">
+
+    <input
+      type="checkbox"
+      name="autorizacao"
+    >
+
+    <span>
+
+      Autorizo a participação do estudante no
+      Interescolar 2026 e declaro estar ciente das
+      regras e condições estabelecidas no edital.
+
+    </span>
+
+  </label>
+
+
+  <!-- BOTÕES -->
+
+  <div class="actions">
+
+    <button
+      class="primary-button"
+      type="submit"
+    >
+
+      ENVIAR INSCRIÇÃO
+
+    </button>
+
+
+    <button
+      class="secondary-button"
+      type="reset"
+    >
+
+      LIMPAR FORMULÁRIO
+
+    </button>
+
+  </div>
+
+
+  <p
+    id="status"
+    class="status"
+    aria-live="polite"
+  ></p>
+
+
+</form>
+
+</main>
+
+
+<footer>
+
+  <img
+    src="assets/identidade-visual.jpg"
+    alt=""
+    class="footer-logo"
+  >
+
+  <div>
+
+    <strong>
+      INTERESCOLAR 2026
+    </strong>
+
+    <p>
+      Grêmio Estudantil • CETI Francisval Rodrigues do Nascimento
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
