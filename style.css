@@ -1,0 +1,662 @@
+:root {
+
+  --blue: #0879ff;
+  --blue2: #003cff;
+  --navy: #020718;
+
+  --text: #edf5ff;
+  --muted: #aebbd0;
+
+  --line: #193154;
+
+  --card: rgba(7,18,39,.92);
+
+}
+
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+body {
+
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: var(--text);
+
+  background:
+
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(0,110,255,.20),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(0,61,255,.16),
+      transparent 28%
+    ),
+
+    var(--navy);
+
+  line-height: 1.55;
+
+}
+
+
+/* CAPA */
+
+.hero {
+
+  position: relative;
+
+  min-height: 560px;
+
+  display: grid;
+
+  place-items: center;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid #15335f;
+
+  background: #010611;
+
+}
+
+
+.hero-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,4,16,.15),
+      rgba(0,4,16,.82)
+    );
+
+  z-index: 1;
+
+}
+
+
+.brand-image {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: .72;
+
+}
+
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  padding: 32px 20px;
+
+  max-width: 900px;
+
+}
+
+
+.tag {
+
+  color: #55a9ff;
+
+  font-weight: 800;
+
+  letter-spacing: .16em;
+
+  font-size: .78rem;
+
+}
+
+
+.hero h1 {
+
+  margin: 12px 0 6px;
+
+  font-size:
+    clamp(2.5rem, 8vw, 6.5rem);
+
+  line-height: .95;
+
+  text-shadow:
+    0 0 28px
+    rgba(0,125,255,.8);
+
+}
+
+
+.hero p {
+
+  font-size: 1.15rem;
+
+  color: #d7e8ff;
+
+}
+
+
+/* BOTÕES */
+
+.primary-button,
+.secondary-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  border-radius: 12px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: .2s;
+
+}
+
+
+.primary-button {
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue2)
+    );
+
+  border: none;
+
+  box-shadow:
+    0 10px 28px
+    rgba(0,94,255,.28);
+
+}
+
+
+.secondary-button {
+
+  color: #dcecff;
+
+  background: #0b1830;
+
+  border: 1px solid var(--line);
+
+}
+
+
+.primary-button:hover,
+.secondary-button:hover {
+
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+
+}
+
+
+/* CONTEÚDO */
+
+main {
+
+  width: min(920px, 92%);
+
+  margin: 0 auto;
+
+  padding: 52px 0;
+
+}
+
+
+.intro {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+}
+
+
+.eyebrow {
+
+  color: #55a9ff;
+
+  font-weight: 800;
+
+  letter-spacing: .12em;
+
+  font-size: .8rem;
+
+}
+
+
+.intro h2 {
+
+  font-size:
+    clamp(1.8rem, 4vw, 2.8rem);
+
+  margin: 8px 0;
+
+}
+
+
+.intro p {
+
+  color: var(--muted);
+
+}
+
+
+.modalidades {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-top: 22px;
+
+}
+
+
+.modalidades span {
+
+  padding: 9px 13px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 999px;
+
+  background: #07152c;
+
+}
+
+
+/* FORMULÁRIO */
+
+.form-card {
+
+  background: var(--card);
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 24px;
+
+  padding:
+    clamp(20px, 4vw, 40px);
+
+  box-shadow:
+    0 20px 70px
+    rgba(0,0,0,.3);
+
+}
+
+
+.section-title {
+
+  display: flex;
+
+  gap: 15px;
+
+  align-items: flex-start;
+
+  margin: 30px 0 18px;
+
+}
+
+
+.section-title:first-child {
+
+  margin-top: 0;
+
+}
+
+
+.section-title > span {
+
+  display: grid;
+
+  place-items: center;
+
+  min-width: 42px;
+
+  height: 42px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue2)
+    );
+
+  font-weight: 900;
+
+}
+
+
+.section-title h2 {
+
+  margin: 0;
+
+  font-size: 1.25rem;
+
+}
+
+
+.section-title p {
+
+  margin: 3px 0 0;
+
+  color: var(--muted);
+
+  font-size: .9rem;
+
+}
+
+
+label {
+
+  display: block;
+
+  font-weight: 700;
+
+  margin: 15px 0;
+
+}
+
+
+input {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 8px;
+
+  min-height: 48px;
+
+  border-radius: 11px;
+
+  border:
+    1px solid #244266;
+
+  background: #040d1d;
+
+  color: white;
+
+  padding: 0 14px;
+
+  font-size: 1rem;
+
+  outline: none;
+
+}
+
+
+input:focus {
+
+  border-color: #3a9cff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(58,156,255,.14);
+
+}
+
+
+.grid-2 {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 16px;
+
+}
+
+
+fieldset {
+
+  border: 0;
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+
+legend {
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+
+}
+
+
+.option {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 12px;
+
+  background: #061229;
+
+}
+
+
+.option input {
+
+  width: 20px;
+
+  min-height: 20px;
+
+  margin: 0;
+
+}
+
+
+.declaration {
+
+  border-left:
+    3px solid #1689ff;
+
+  background: #06152c;
+
+  padding: 16px;
+
+  border-radius:
+    0 12px 12px 0;
+
+  color: #d2e2f8;
+
+  font-size: .94rem;
+
+}
+
+
+.check {
+
+  display: flex;
+
+  gap: 10px;
+
+  align-items: flex-start;
+
+  font-weight: 600;
+
+}
+
+
+.check input {
+
+  width: 20px;
+
+  min-height: 20px;
+
+  margin: 2px 0 0;
+
+}
+
+
+.actions {
+
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 30px;
+
+}
+
+
+.status {
+
+  font-weight: 700;
+
+  margin-top: 18px;
+
+}
+
+
+/* RODAPÉ */
+
+footer {
+
+  border-top:
+    1px solid var(--line);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 25px 5%;
+
+  background: #010612;
+
+}
+
+
+.footer-logo {
+
+  width: 90px;
+
+  height: 50px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+}
+
+
+footer p {
+
+  margin: 3px 0;
+
+  color: #8193ad;
+
+  font-size: .85rem;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+  .hero {
+
+    min-height: 500px;
+
+  }
+
+
+  .grid-2 {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .form-card {
+
+    border-radius: 18px;
+
+  }
+
+
+  .actions .primary-button,
+  .actions .secondary-button {
+
+    width: 100%;
+
+  }
+
+}
