@@ -1,7 +1,6 @@
 function doPost(e) {
   const planilha = SpreadsheetApp.getActiveSpreadsheet();
   const aba = planilha.getSheets()[0];
-
   const dados = e.parameter;
 
   aba.appendRow([
