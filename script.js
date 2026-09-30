@@ -1,60 +1,55 @@
-const form = document.getElementById("inscricao");
+const NOME_ABA = "Inscrições";
 
-const statusBox =
-  document.getElementById("status");
+function doPost(e) {
+  try {
+    const planilha = SpreadsheetApp.getActiveSpreadsheet();
+    let aba = planilha.getSheetByName(NOME_ABA);
 
+    if (!aba) {
+      aba = planilha.insertSheet(NOME_ABA);
 
-form.addEventListener("submit", function(event) {
+      aba.appendRow([
+        "Data/Hora",
+        "Nome completo",
+        "Data de nascimento",
+        "Idade",
+        "Escola",
+        "Série/Turma",
+        "Modalidade",
+        "Responsável pela equipe",
+        "Telefone",
+        "Declaração",
+        "Responsável legal",
+        "CPF",
+        "Telefone do responsável"
+      ]);
+    }
 
-  event.preventDefault();
+    const dados = e.parameter;
 
+    aba.appendRow([
+      new Date(),
+      dados.nome || "",
+      dados.nascimento || "",
+      dados.idade || "",
+      dados.escola || "",
+      dados.turma || "",
+      dados.modalidade || "",
+      dados.responsavel_equipe || "",
+      dados.telefone_equipe || "",
+      dados.declaracao || "",
+      dados.responsavel_legal || "",
+      dados.cpf || "",
+      dados.telefone_responsavel || ""
+    ]);
 
-  if (!form.checkValidity()) {
+    return ContentService
+      .createTextOutput("OK")
+      .setMimeType(ContentService.MimeType.TEXT);
 
-    form.reportValidity();
-
-    return;
-
+  } catch (erro) {
+    return ContentService
+      .createTextOutput("ERRO: " + erro)
+      .setMimeType(ContentService.MimeType.TEXT);
   }
-
-
-  const dados =
-    new FormData(form);
-
-
-  const nome =
-    dados.get("nome");
-
-
-  const modalidade =
-    dados.get("modalidade");
-
-
-  statusBox.textContent =
-    "Ficha preenchida com sucesso, " +
-    nome +
-    "! Modalidade escolhida: " +
-    modalidade +
-    ".";
-
-
-  statusBox.style.color =
-    "#55c7ff";
-
-
-  statusBox.scrollIntoView({
-
-    behavior: "smooth",
-
-    block: "center"
-
-  });
-
-});
-
-
-form.addEventListener("reset", function() {
-
-  statusBox.textContent = "";
-
-});
+}
