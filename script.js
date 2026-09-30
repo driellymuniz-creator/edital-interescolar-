@@ -1,55 +1,26 @@
-const NOME_ABA = "Inscrições";
-
 function doPost(e) {
-  try {
-    const planilha = SpreadsheetApp.getActiveSpreadsheet();
-    let aba = planilha.getSheetByName(NOME_ABA);
+  const planilha = SpreadsheetApp.getActiveSpreadsheet();
+  const aba = planilha.getSheets()[0];
 
-    if (!aba) {
-      aba = planilha.insertSheet(NOME_ABA);
+  const dados = e.parameter;
 
-      aba.appendRow([
-        "Data/Hora",
-        "Nome completo",
-        "Data de nascimento",
-        "Idade",
-        "Escola",
-        "Série/Turma",
-        "Modalidade",
-        "Responsável pela equipe",
-        "Telefone",
-        "Declaração",
-        "Responsável legal",
-        "CPF",
-        "Telefone do responsável"
-      ]);
-    }
+  aba.appendRow([
+    new Date(),
+    dados.nome || "",
+    dados.nascimento || "",
+    dados.idade || "",
+    dados.escola || "",
+    dados.turma || "",
+    dados.modalidade || "",
+    dados.responsavel_equipe || "",
+    dados.telefone_equipe || "",
+    dados.declaracao || "",
+    dados.responsavel_legal || "",
+    dados.cpf || "",
+    dados.telefone_responsavel || ""
+  ]);
 
-    const dados = e.parameter;
-
-    aba.appendRow([
-      new Date(),
-      dados.nome || "",
-      dados.nascimento || "",
-      dados.idade || "",
-      dados.escola || "",
-      dados.turma || "",
-      dados.modalidade || "",
-      dados.responsavel_equipe || "",
-      dados.telefone_equipe || "",
-      dados.declaracao || "",
-      dados.responsavel_legal || "",
-      dados.cpf || "",
-      dados.telefone_responsavel || ""
-    ]);
-
-    return ContentService
-      .createTextOutput("OK")
-      .setMimeType(ContentService.MimeType.TEXT);
-
-  } catch (erro) {
-    return ContentService
-      .createTextOutput("ERRO: " + erro)
-      .setMimeType(ContentService.MimeType.TEXT);
-  }
+  return ContentService
+    .createTextOutput("OK")
+    .setMimeType(ContentService.MimeType.TEXT);
 }
