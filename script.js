@@ -2,7 +2,6 @@ function doPost(e) {
   const planilha = SpreadsheetApp.getActiveSpreadsheet();
   const aba = planilha.getSheets()[0];
   const dados = e.parameter;
-
   aba.appendRow([
     new Date(),
     dados.nome || "",
@@ -18,7 +17,6 @@ function doPost(e) {
     dados.cpf || "",
     dados.telefone_responsavel || ""
   ]);
-
   return ContentService
     .createTextOutput("OK")
     .setMimeType(ContentService.MimeType.TEXT);
